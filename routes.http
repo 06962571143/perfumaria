@@ -1,0 +1,45 @@
+// cadastrar
+POST http://localhost:3333/perfume
+Content-Type: application/json
+
+{
+    "marca": "Perfume 02",
+    "volume": "150 ml",
+    "fragrancia": "frutas vermelhas"
+}
+
+###
+
+// consulta geral
+GET http://localhost:3333/perfume
+
+###
+
+// consulta com filtro
+GET http://localhost:3333/perfume?search=atualizado
+
+###
+
+// alterar tudo
+PUT http://localhost:3333/perfume/9160dfbe-d003-4fa5-b357-31633faed4f7
+Content-Type: application/json
+
+{
+    "marca": "Perfume com PUT",
+    "volume": "200 ml",
+    "fragrancia": "frutas vermelhas"
+}
+
+###
+
+PATCH http://localhost:3333/perfume/ce8c5296-a392-4f81-b09a-e40b670351fa
+Content-Type: application/json
+
+{
+    "marca": "Perfume atualizado com PATCH"
+}
+
+###
+
+// excluir
+DELETE http://localhost:3333/perfume/d8459a03-93bd-444f-9dba-44b643eb8df8
